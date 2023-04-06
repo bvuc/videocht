@@ -1,4 +1,5 @@
 const socket = io("/");
+//const socket = io("https://videoapp.ddns.net/");
 const videoGrid = document.getElementById("video-grid");
 const myVideo = document.createElement("video");
 const showChat = document.querySelector("#showChat");
@@ -36,6 +37,8 @@ var peer = new Peer({
       { url: 'stun:stun.voipstunt.com' },
       { url: 'stun:stun.voxgratia.org' },
       { url: 'stun:stun.xten.com' },
+      { urls: 'stun:stun.l.google.com:19302' },
+      { urls: 'stun:stun1.l.google.com:19302' },
       {
         url: 'turn:192.158.29.39:3478?transport=udp',
         credential: 'JZEOEt2V3Qb0y27GRntt2u2PAYA=',
@@ -45,7 +48,7 @@ var peer = new Peer({
         url: 'turn:192.158.29.39:3478?transport=tcp',
         credential: 'JZEOEt2V3Qb0y27GRntt2u2PAYA=',
         username: '28224511:1379330808'
-      }
+      },
     ]
   },
 
@@ -178,5 +181,5 @@ socket.on("createMessage", (message, userName) => {
         <b><i class="far fa-user-circle"></i> <span> ${userName === user ? "me" : userName
     }</span> </b>
         <span>${message}</span>
-    </div>`;
+    </div>`;
 });
