@@ -24,7 +24,7 @@ const user = prompt("Enter your name");
 
 var peer = new Peer({
   host: 'video-cht.onrender.com',
-  port: 3030,
+  port: 10000,
   path: '/peerjs',
   config: {
     'iceServers': [
