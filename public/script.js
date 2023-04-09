@@ -26,6 +26,7 @@ var peer = new Peer({
   host: 'video-cht.onrender.com',
   port: 10000,
   path: '/peerjs',
+  secure: true,
   config: {
     'iceServers': [
       { url: 'stun:stun01.sipphone.com' },
